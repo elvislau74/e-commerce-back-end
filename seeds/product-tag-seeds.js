@@ -1,5 +1,6 @@
 const { ProductTag } = require('../models');
 
+// Adding/seeding rows for Product tags
 const productTagData = [
   {
     product_id: 1,

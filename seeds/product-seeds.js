@@ -1,5 +1,6 @@
 const { Product } = require('../models');
 
+// Adding/seeding product rows
 const productData = [
   {
     product_name: 'Plain T-Shirt',

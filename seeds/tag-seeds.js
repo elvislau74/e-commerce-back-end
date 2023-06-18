@@ -1,5 +1,6 @@
 const { Tag } = require('../models');
 
+// Adding/seeding rows for tag names
 const tagData = [
   {
     tag_name: 'rock music',

@@ -1,5 +1,6 @@
 const { Category } = require('../models');
 
+// Adding/seeding category rows
 const categoryData = [
   {
     category_name: 'Shirts',

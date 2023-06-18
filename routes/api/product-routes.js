@@ -3,10 +3,8 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // The `/api/products` endpoint
 
-// get all products
+// This GET route finds all the products including it's associated categories and tag data
 router.get('/', async (req, res) => {
-  // find all products
-  // be sure to include its associated Category and Tag data
   try {
     const productData = await Product.findAll({
       include: [{model: Category}, {model: Tag}]
@@ -18,10 +16,8 @@ router.get('/', async (req, res) => {
   }
 });
 
-// get one product
+// This GET route finds one specific product including it's associated categories and tag data by id value
 router.get('/:id', async (req, res) => {
-  // find a single product by its `id`
-  // be sure to include its associated Category and Tag data
   try {
     const productData = await Product.findByPk(req.params.id, {
       include: [{model: Category}, {model: Tag}]
@@ -37,13 +33,12 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// create new product
+// This POST route creates a new product including it's associated categories and tag data
 router.post('/', async (req, res) => {
-
   try {
     const product = await Product.create(req.body);
   
-    // if there's product tags, we need to create pairings to bulk create in the ProductTag model
+    // if there's product tags, create pairings to bulk create in the ProductTag model
     if (req.body.hasOwnProperty("tagIds") && req.body.tagIds.length) {
       const productTagIdArr = req.body.tagIds.map((tag_id) => {
         return {
@@ -64,9 +59,8 @@ router.post('/', async (req, res) => {
   }
 });
 
-// update product
+// This PUT route updates the products including it's associated categories and tag data by id value
 router.put('/:id',  async (req, res) => {
-  // update product data
   try {
     const product = await Product.update(req.body, {
       where: {
@@ -104,8 +98,8 @@ router.put('/:id',  async (req, res) => {
     };
 });
 
+// This DELETE route deletes products including it's associated categories and tag data by id value
 router.delete('/:id', async (req, res) => {
-  // delete one product by its `id` value
   try {
     const productData = await Product.destroy({
       where: {
@@ -125,4 +119,5 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+// Export router
 module.exports = router;
