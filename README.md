@@ -5,6 +5,8 @@
 
   In this project, we had to build the back end of an e-commerce application by creating API routes. Sequelize, which is a tool for Object Relational Mapping (ORM) was a big part in this process. Using Sequelize, we can work with MySQL databases in Node.js. We also implemented async/await syntax into our API routes for cleaner code. 
 
+  There is no front-end for this project, so all the routes will be tested with Insomnia Core.
+
 
   ## Table of Contents
 
@@ -25,7 +27,9 @@
 
   ## Installation
 
-  This application requires the user to have Node.js downloaded onto their system. It is recommended that the user downloads v16 up to v18 for this application to run properly. 
+  This application requires the user to have Node.js downloaded onto their system. It is recommended that the user downloads v16 up to v18 for this application to run properly. You can download it from [here](https://nodejs.org/en/blog/release/v16.16.0).
+
+  Insomnia is required to test all the routes in this application, since there is no front-end to view them in. You can download it [here](https://insomnia.rest/download).
 
   MySQL is also required for this app to run properly. Follow this step-by-step [guide](https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide) to make sure everything is downloaded smoothly.
 
