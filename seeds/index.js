@@ -7,7 +7,7 @@ const sequelize = require('../config/connection');
 
 // Running all the seed files to add rows to all tables
 const seedAll = async () => {
-  await sequelize.sync({ force: true });
+  await sequelize.sync({ force: false });
   console.log('\n----- DATABASE SYNCED -----\n');
   await seedCategories();
   console.log('\n----- CATEGORIES SEEDED -----\n');
