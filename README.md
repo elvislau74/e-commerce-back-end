@@ -40,6 +40,10 @@
 
   In the terminal, after using MySQL and running the schema file to create the database, you then exit and type `node seeds` to run the code that seeds the database. After that, you can start the server by typing `node server` and begin testing each route in Insomnia Core. Watch the video below to see an example:
 
+
+https://github.com/elvislau74/e-commerce-back-end/assets/126195092/ce47b76b-50ae-4ba8-bcff-9907f1995a50
+
+
   If the video above does not work, click [here](https://drive.google.com/file/d/1DbZy8RGrecY0tyKKoF1f1IzbkMQ4APgv/view).
 
 
